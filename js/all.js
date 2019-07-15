@@ -1,3 +1,4 @@
+// Efeito de desdobramento
 $(function() {
   var $container = $("#uc-container"),
     pfold = $("#uc-container").pfold({
@@ -16,4 +17,10 @@ $(function() {
     .on("click", function() {
       pfold.fold();
     });
+});
+
+// Efeito de giro no cartão
+var card = document.querySelector('.cartao');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('virado');
 });

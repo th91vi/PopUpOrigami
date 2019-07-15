@@ -1,0 +1,42 @@
+.espaco {
+    width: 200px;
+    height: 260px;
+    border: 1px solid #CCC;
+    margin: 40px 0;
+    perspective: 600px;
+  }
+  
+  .cartao {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .cartao.virado {
+    transform: rotateY(180deg);
+  }
+  
+  .cartao_lado {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 260px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    backface-visibility: hidden;
+  }
+  
+  .cartao_lado-frente {
+    background: red;
+  }
+  
+  .cartao_lado-verso {
+    background: blue;
+    transform: rotateY(180deg);
+  }
+  
