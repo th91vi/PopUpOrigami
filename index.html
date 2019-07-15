@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/pfold.css">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="preload" href="img/conteudo-pop_up-verso.png" as="image">
     <title>Pop-up Origami</title>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 d-sm-flex justify-content-center align-items-center">
+            <div class="col-sm-12 d-sm-flex justify-content-start align-items-center">
                 <div id="uc-container" class="uc-container">
                     <div class="uc-initial-content">
                         <!-- initial content -->
@@ -20,17 +21,18 @@
                     </div>
                     <div class="uc-final-content">
                         <!-- final content -->
-                        <div class="espaco espaco-cartao">
+                        <label>
+                            <input type="checkbox"  />
                             <div class="cartao">
-                                <div class="cartao_lado cartao_lado-frente">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minima consequuntur veritatis, neque laudantium quae. Veritatis illo placeat voluptatum sapiente fuga, temporibus amet aliquid dolorum reiciendis iure vel eligendi odio.</p>
+                                <div class="frente">
+                                    <img src="img/conteudo-pop_up-frente.png" alt="">
                                 </div>
-                                <div class="cartao_lado cartao_lado-verso">
-                                    <span class="close">X</span>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At dicta magni, velit eius necessitatibus nobis doloribus enim molestiae sequi ducimus excepturi doloremque soluta qui, quod aliquid neque quae accusamus laudantium?</p>
+                                <div class="verso">
+                                    <img src="img/conteudo-pop_up-verso.png" alt="">
+                                    <span class="close">x</span>
                                 </div>
                             </div>
-                        </div>
+                        </label>
                     </div>
                 </div>
             </div>

@@ -13,8 +13,7 @@
 .uc-initial-content,
 .uc-back,
 .uc-front {
-	/* background: #fff; */
-	background: darkgrey;
+	background: #fff;
 }
 
 .uc-final,

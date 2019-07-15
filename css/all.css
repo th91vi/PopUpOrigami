@@ -1,42 +1,112 @@
-.espaco {
-    width: 200px;
-    height: 260px;
-    border: 1px solid #CCC;
-    margin: 40px 0;
-    perspective: 600px;
-  }
-  
-  .cartao {
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .cartao.virado {
-    transform: rotateY(180deg);
-  }
-  
-  .cartao_lado {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    line-height: 260px;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
-    backface-visibility: hidden;
-  }
-  
-  .cartao_lado-frente {
-    background: red;
-  }
-  
-  .cartao_lado-verso {
-    background: blue;
-    transform: rotateY(180deg);
-  }
-  
+/* Dobradura */
+
+body {
+  background: greenyellow;
+}
+
+.uc-container {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	top: 0;
+	left: 0;
+}
+
+.uc-single, 
+.uc-final-wrapper,
+.uc-initial-content,
+.uc-back,
+.uc-front {
+	background: lavenderblush;
+}
+
+.uc-final,
+.uc-initial, 
+.uc-final-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.uc-initial-content,
+.uc-final-content {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+/* Cartão dentro da dobradura */
+label {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  display: block;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.cartao {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+  z-index: 20;
+}
+
+.cartao div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #FFF;
+  text-align: center;
+  line-height: 200px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.cartao .verso {
+  background: #222;
+  color: #FFF;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+/* label:hover .cartao {
+  -webkit-transform: rotateX(20deg);
+  transform: rotateX(20deg);
+  box-shadow: 0 20px 20px rgba(50, 50, 50, 0.2);
+} */
+
+input {
+  display: none;
+}
+
+:checked + .cartao {
+  transform: rotatey(180deg);
+  -webkit-transform: rotatey(180deg);
+}
+
+/* label:hover :checked + .card {
+  transform: rotateX(160deg);
+  -webkit-transform: rotateX(160deg);
+  box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
+} */
+
+span.close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
