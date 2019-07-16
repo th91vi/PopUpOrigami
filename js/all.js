@@ -15,6 +15,6 @@ $(function () {
     .end()
     .find("span.close")
     .on("click", function () {
-      pfold.fold();
+      $("#uc-container").hide();
     });
 });

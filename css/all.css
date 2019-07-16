@@ -99,12 +99,6 @@ input {
   -webkit-transform: rotatey(180deg);
 }
 
-/* label:hover :checked + .card {
-  transform: rotateX(160deg);
-  -webkit-transform: rotateX(160deg);
-  box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
-} */
-
 span.close {
   position: absolute;
   right: 5px;
