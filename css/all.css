@@ -4,10 +4,14 @@ body {
   background: greenyellow;
 }
 
+.img-logo {
+  margin-top: 15px
+}
+
 .uc-container {
 	position: relative;
-	width: 100px;
-	height: 100px;
+	width: 87px;
+	height: 87px;
 	top: 0;
 	left: 0;
 }
@@ -24,7 +28,8 @@ body {
 .uc-initial, 
 .uc-final-wrapper {
 	width: 100%;
-	height: 100%;
+  height: 100%;
+  /* max-width: 100vw; */
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -44,8 +49,8 @@ label {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   display: block;
-  width: 400px;
-  height: 400px;
+  width: 348px;
+  height: 348px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -103,4 +108,17 @@ span.close {
   position: absolute;
   right: 5px;
   top: 5px;
+}
+
+span.close-fake {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
 }

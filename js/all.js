@@ -8,7 +8,7 @@ $(function () {
     });
 
   $container
-    .find("h1.clickMe")
+    .find("img.clickMe")
     .on("click", function () {
       pfold.unfold();
     })
