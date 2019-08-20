@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="preload" href="img/conteudo-pop_up-verso.png" as="image">
     <title>Pop-up Origami</title>
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -21,16 +23,37 @@
                     </div>
                     <div class="uc-final-content">
                         <!-- final content -->
-                        <label>
-                            <input type="checkbox"  />
+                        <label class="label-cartao">
+                            <input type="checkbox" />
                             <div class="cartao">
-                                <div class="frente">
+                                <div class="conteudo frente">
                                     <img src="img/conteudo-pop_up-frente.png" alt="">
-                                    <span class="close-fake">x</span>
+                                    <span class="close-fake">+</span>
                                 </div>
-                                <div class="verso">
-                                    <img src="img/conteudo-pop_up-verso.png" alt="">
-                                    <span class="close">x</span>
+                                <div class="conteudo verso">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <p>Deixe seus dados abaixo e entraremos em contato</p>
+                                                <form action="">
+                                                    <div class="form-group">
+                                                        <label for="nomeEmpresa"></label>
+                                                        <input type="text" class="form-control" id="nomeEmpresa" placeholder="Nome da Empresa">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="emailEmpresa"></label>
+                                                        <input type="email" class="form-control" id="emailEmpresa" placeholder="Email da Empresa">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="telefoneEmpresa"></label>
+                                                        <input type="tel" class="form-control" id="telefoneEmpresa" placeholder="Telefone da Empresa">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-success">Solicitar Cotação</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="close">+</span>
                                 </div>
                             </div>
                         </label>
@@ -39,8 +62,8 @@
             </div>
         </div>
     </div>
-    
-    
+
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -48,4 +71,5 @@
     <script src="js/jquery.pfold.js"></script>
     <script src="js/all.js"></script>
 </body>
+
 </html>

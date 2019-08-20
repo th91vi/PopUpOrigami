@@ -11,10 +11,11 @@ $(function () {
     .find("img.clickMe")
     .on("click", function () {
       pfold.unfold();
+      $('.uc-initial').hide()
     })
     .end()
     .find("span.close")
     .on("click", function () {
-      $("#uc-container").hide();
+      $("#uc-container").toggleClass('scale-zero');
     });
 });

@@ -13,37 +13,52 @@ body {
 	width: 87px;
 	height: 87px;
 	top: 0;
-	left: 0;
+  left: 0;
+  transform: scale(1);
 }
 
 .uc-single, 
-.uc-final-wrapper,
-.uc-initial-content,
 .uc-back,
-.uc-front {
+.uc-front,
+.uc-initial {
 	background: lavenderblush;
 }
 
+.uc-final-wrapper,
+.uc-initial-content {
+  background: none;
+}
+
 .uc-final,
-.uc-initial, 
 .uc-final-wrapper {
+	width: 100%;
+  height: 100%;
+  /* max-width: 100vw; */
+  position: absolute;
+}
+.uc-initial {
 	width: 100%;
   height: 100%;
   /* max-width: 100vw; */
 	position: absolute;
 	top: 0;
-	left: 0;
+  left: 0;
+  background: lavenderblush;
+}
+
+.uc-initial-content {
+  background: lavenderblush;
 }
 
 .uc-initial-content,
 .uc-final-content {
 	width: 100%;
 	height: 100%;
-	position: relative;
+  position: relative;
 }
 
 /* Cartão dentro da dobradura */
-label {
+label.label-cartao {
   -webkit-perspective: 1000px;
   perspective: 1000px;
   -webkit-transform-style: preserve-3d;
@@ -68,25 +83,58 @@ label {
   -webkit-transition: all 600ms;
   transition: all 600ms;
   z-index: 20;
+  background: lavenderblush;
 }
 
-.cartao div {
+.cartao .conteudo {
   position: absolute;
   height: 100%;
   width: 100%;
   background: #FFF;
   text-align: center;
-  line-height: 200px;
+  /* line-height: 200px; */
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 2px;
 }
 
 .cartao .verso {
-  background: #222;
-  color: #FFF;
+  background: #fff0f5;
+  color: #28a745;
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
+}
+
+.cartao .verso p {
+  margin-top: 10%;
+  margin-bottom: 0.5rem
+}
+
+.cartao .conteudo form {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  top: 50%;
+  transform: translate(0, 50%); 
+  margin-top: 10%; */
+}
+
+.cartao .conteudo form .btn {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #28a745;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69,.25);
 }
 
 /* label:hover .cartao {
@@ -108,6 +156,7 @@ span.close {
   position: absolute;
   right: 5px;
   top: 5px;
+  transform: rotate(45deg);
 }
 
 span.close-fake {
@@ -121,4 +170,10 @@ span.close-fake {
   color: #000;
   text-shadow: 0 1px 0 #fff;
   opacity: .5;
+  transform: rotate(45deg);
+}
+
+#uc-container.scale-zero {
+  transform: scale(0);
+  transition: transform 150ms ease-out !important;
 }
